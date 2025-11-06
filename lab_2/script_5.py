@@ -1,7 +1,12 @@
-def sum(n):
-    if n == 1:
-        return 1
-    return n + sum(n-1)
+import json
 
-num = int(input())
-print ("Рекурсивная сумма:", sum(num))
+user = {
+  "name": "Александр",
+  "age": 25,
+  "city": "Тула",
+}
+print(user)
+dict_to_object = json.dumps(user, ensure_ascii=False)
+print(dict_to_object)
+object_to_dict = json.loads(dict_to_object)
+print(object_to_dict)
