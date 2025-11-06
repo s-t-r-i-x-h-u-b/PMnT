@@ -1,19 +1,6 @@
-while True:
-    print("Выберите действие: +, -, *, /")
-    c = input()
-    if (c == '+' or c == '-' or c == '*' or c == '/'):
-        break;
+def string_reverse(s):
+  return s[::-1]
 
-print("Введите первое число: ")
-a = float(input())
-print("Введите второе число: ")
-b = float(input())
-
-if c == '+':
-    print (a + b)
-elif c == '-':
-    print (a - b)
-elif c == '*':
-    print (a * b)
-elif c == '/':
-    print (a / b)
+print("Введите строку")
+s = input()
+print(f"Перевернутая строка: {string_reverse(s)}")
