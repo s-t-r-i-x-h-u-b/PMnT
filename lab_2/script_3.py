@@ -1,12 +1,13 @@
-list = []
-print ("Чтобы закончить введите 0")
-while True:
-    print ("Введите элемент списка: ")
-    c = int(input())
-    if (c == 0): break
-    list.append(c)
-min = list[0]
-for i in list:
-    if i < min:
-        min = i
-print ("Минимальный элемент списка:", min)
+def natural_number_input():
+  print("Введите число")
+  n = int(input())
+  while n < 1:
+    print("Число должно быть положительным")
+    n = int(input())
+  return n
+
+
+n = natural_number_input()
+d = {x: x**2 for x in range(n + 1)}
+for key, value in d.items():
+  print(key, value)
