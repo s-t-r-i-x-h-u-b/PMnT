@@ -1,5 +1,5 @@
 def string_reverse(s):
-  return s[::-1]
+    return s[::-1]
 
 print("Введите строку")
 s = input()
