@@ -5,8 +5,16 @@ user = {
     "age": 25,
     "city": "Тула",
 }
-print(user)
+print(f"Словарь user: {user}")
+
+with open("test.json", "w") as file:
+    json.dump(user, file)
+
 dict_to_object = json.dumps(user, ensure_ascii=False)
-print(dict_to_object)
+print(f"Преобразование в json: {dict_to_object}")
 object_to_dict = json.loads(dict_to_object)
-print(object_to_dict)
+print(f"Преобразование из json: {object_to_dict}")
+
+with open("test.json", "r") as file:
+    data = json.load(file)
+    print(f"Чтение из файла: {data}")
